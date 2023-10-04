@@ -76,6 +76,10 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'ru-RU'
 
+EMAIL_BACKEND = 'django.core.mail.backends.filebased.EmailBackend'
+
+EMAIL_FILE_PATH = BASE_DIR / 'sent_emails'
+
 TIME_ZONE = 'UTC'
 
 USE_I18N = True
@@ -83,6 +87,10 @@ USE_I18N = True
 USE_L10N = False
 
 USE_TZ = True
+
+LOGIN_URL = 'login' 
+
+LOGIN_REDIRECT_URL = 'pages:homepage'
 
 STATIC_URL = '/static/'
 
